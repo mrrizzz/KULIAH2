@@ -12,8 +12,6 @@ struct Data
     char grade;
 };
 
-struct Data;
-
 void PrintLine();
 void InputData(int *, struct Data **);
 char GetGrade(float);
@@ -34,7 +32,6 @@ int main(int argc, char const *argv[])
 
 void InputData(int *jumlah, struct Data **data)
 {
-
     printf("MENGHITUNG NILAI AKHIR \nMATA KULIAH KONSEP PEMROGRAMAN\n\n");
     printf("Berapa jumlah mahasiswa ? ");
     scanf("%d", jumlah);

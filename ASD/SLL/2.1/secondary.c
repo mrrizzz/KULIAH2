@@ -1,6 +1,6 @@
 #include "head.h"
 
-Node *head = NULL, *current;
+Node *head  = NULL, *current;
 
 void alokasi()
 {

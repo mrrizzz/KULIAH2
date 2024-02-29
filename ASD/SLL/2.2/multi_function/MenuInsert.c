@@ -1,8 +1,7 @@
-#include "head.h"
+#include "../head.h"
 
-int main(int argc, char const *argv[])
+void MenuInsert()
 {
-    int index = 0;
     int exit = 0;
     int insert_choice;
     while (!exit)
@@ -14,35 +13,47 @@ int main(int argc, char const *argv[])
         {
         case 1:
             awal();
-            // clearScreen();
+            clearScreen();
             break;
         case 2:
             akhir();
-            // clearScreen();
+            clearScreen();
             break;
         case 3:
             // comment out line 24 for multi function purpose
             // after();
             // comment out line 26 for single function purpose
-            (head != NULL && index != 0) ? after() : printf("SLL Masih kosong, tidak bisa insert after\n");
+            if (head != NULL)
+            {
+                after();
+                clearScreen();
+            }
+            else
+            {
+                clearScreen();
+                printf("SLL Masih kosong, tidak bisa insert after\n");
+            }
             break;
         case 4:
-            // comment out line 29 for multi function purpose
-            // before();
-            // comment out line 31 for single function purpose
-            (head != NULL && index != 0) ? before() : printf("SLL Masih kosong, tidak bisa insert after\n");
+            if (head != NULL)
+            {
+                before();
+                clearScreen();
+            }
+            else
+            {
+                clearScreen();
+                printf("SLL Masih kosong, tidak bisa insert before\n");
+            }
             break;
         case 0:
             exit = 1;
             break;
         default:
-            // clearScreen();
+            clearScreen();
             printf("Pilihan anda tadi tidak valid, silahkan coba lagi\n");
             break;
         }
         tampil();
-        index++;
     }
-    free_memory();
-    return 0;
 }

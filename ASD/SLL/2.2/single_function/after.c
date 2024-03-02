@@ -2,8 +2,6 @@
 
 void after()
 {
-    // akhir();
-
     Siswa *findKey;
     int key;
 
@@ -11,20 +9,19 @@ void after()
     findKey = head;
     printf("Masukkan setelah nilai ? ");
     scanf("%d", &key);
-    while (findKey->next != NULL && findKey->nomor != key)
+    while (findKey != NULL && findKey->nomor != key)
     {
         findKey = findKey->next;
     }
     if (findKey == NULL)
     {
         printf("Gagal menemukan key\n");
+        failedInAfter = 1;
     }
     else
     {
-
         current->next = findKey->next;
         findKey->next = current;
     }
-    // clearScreen();
-    // tampil();
+    clearScreen();
 }

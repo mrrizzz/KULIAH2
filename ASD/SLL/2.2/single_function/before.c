@@ -2,7 +2,6 @@
 // comment out the unused part
 void before()
 {
-    // akhir();
     Siswa *findKey, *prev;
 
     prev = NULL;
@@ -18,8 +17,10 @@ void before()
         prev = findKey;
         findKey = findKey->next;
     }
-    if (findKey == NULL)
+    if (findKey == NULL){
         printf("Gagal menemukan key\n");
+        failedInBefore = 1;
+    }
     else
     {
         if (prev == NULL)
@@ -33,6 +34,5 @@ void before()
             prev->next = current;
         }
     }
-    // clearScreen();
-    // tampil();
+    clearScreen();
 }

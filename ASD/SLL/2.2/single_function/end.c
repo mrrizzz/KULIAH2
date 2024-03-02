@@ -13,6 +13,5 @@ void akhir()
             tail = tail->next;
         tail->next = current;
     }
-    // clearScreen();
-    // tampil();
+    clearScreen();
 }

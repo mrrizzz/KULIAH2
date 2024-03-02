@@ -8,6 +8,5 @@ void awal()
         current->next = head;
     }
     head = current;
-    // clearScreen();
-    // tampil();
+    clearScreen();
 }

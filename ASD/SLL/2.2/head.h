@@ -14,13 +14,6 @@ struct Node
 };
 typedef struct Node Siswa;
 
-struct simpul
-{
-    int data;
-    struct simpul *next;
-};
-typedef struct simpul Node;
-
 extern Siswa *head; 
 extern Siswa *current;
 

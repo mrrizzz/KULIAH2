@@ -1,10 +1,11 @@
 #include "head.h"
 
 Siswa *head  = NULL, *current;
+int failedInAfter;
+int failedInBefore;
 
 void alokasi()
 {
-
     current = (Siswa *)malloc(sizeof(Siswa));
     if (current == NULL)
     {

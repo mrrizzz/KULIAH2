@@ -34,12 +34,10 @@ int main(int argc, char const *argv[])
         do
         {
             akhir();
-            // after();
             printf("Lagi? (y/t) : ");
             choice = getchar();
         } while (choice == 'y' || choice == 'Y');
         printf("INSERT AFTER\n");
-        // akhir();
         after();
         break;
     case 4:
@@ -47,13 +45,10 @@ int main(int argc, char const *argv[])
         do
         {
             akhir();
-            // after();
             printf("Lagi? (y/t) : ");
             choice = getchar();
         } while (choice == 'y' || choice == 'Y');
         printf("INSERT BEFORE\n");
-
-        // akhir();
         before();
         break;
     default:

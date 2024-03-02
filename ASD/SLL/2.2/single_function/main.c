@@ -30,24 +30,31 @@ int main(int argc, char const *argv[])
         } while (choice == 'y' || choice == 'Y');
         break;
     case 3:
-        printf("Linked list untuk aplikasi INSERT SETELAH NILAI TERTENTU\n");
+        printf("Linked list untuk aplikasi INSERT SETELAH NILAI TERTENTU, INSERT AKHIR TERLEBIH DAHULU\n");
         do
         {
             akhir();
-            after();
+            // after();
             printf("Lagi? (y/t) : ");
             choice = getchar();
         } while (choice == 'y' || choice == 'Y');
+        printf("INSERT AFTER\n");
+        // akhir();
+        after();
         break;
     case 4:
-        printf("Linked list untuk aplikasi INSERT SEBELUM NILAI TERTENTU\n");
+        printf("Linked list untuk aplikasi INSERT SEBELUM NILAI TERTENTU, INSERT AKHIR TERLEBIH DAHULU\n");
         do
         {
             akhir();
-            before();
+            // after();
             printf("Lagi? (y/t) : ");
             choice = getchar();
         } while (choice == 'y' || choice == 'Y');
+        printf("INSERT BEFORE\n");
+
+        // akhir();
+        before();
         break;
     default:
         break;

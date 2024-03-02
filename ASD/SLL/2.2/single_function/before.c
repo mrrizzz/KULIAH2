@@ -33,4 +33,6 @@ void before()
             prev->next = current;
         }
     }
+    // clearScreen();
+    // tampil();
 }

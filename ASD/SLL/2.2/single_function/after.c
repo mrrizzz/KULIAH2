@@ -25,6 +25,6 @@ void after()
         current->next = findKey->next;
         findKey->next = current;
     }
-    clearScreen();
-    tampil();
+    // clearScreen();
+    // tampil();
 }

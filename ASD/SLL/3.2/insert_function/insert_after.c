@@ -1,22 +1,21 @@
 #include "../head.h"
 
-void after()
+void insert_after()
 {
-    Siswa *findKey;
+    node *findKey;
     int key;
-
     alokasi();
     findKey = head;
     printf("Masukkan setelah nilai ? ");
     scanf("%d", &key);
-    while (findKey != NULL && findKey->nomor != key)
+    while (findKey != NULL && findKey->no != key)
     {
         findKey = findKey->next;
     }
     if (findKey == NULL)
     {
         printf("Gagal menemukan key\n");
-        failedInAfter = 1;
+        failed_in_after = 1;
     }
     else
     {

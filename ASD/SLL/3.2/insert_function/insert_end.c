@@ -1,8 +1,8 @@
 #include "../head.h"
 
-void akhir()
+void insert_akhir()
 {
-    Siswa *tail;
+    node *tail;
     alokasi();
     if (head == NULL)
         head = current;

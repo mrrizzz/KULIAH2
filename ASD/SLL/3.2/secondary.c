@@ -71,8 +71,14 @@ void alokasi()
         printf("gagal mengalokasikan memori\n");
         exit(1);
     }
-    printf("Nilai yang akan disimpan : ");
-    scanf("%d", &current->data);
+    printf("\nNo\t: ");
+    scanf("%d", &current->no);
+    getchar();
+    printf("Nama\t: ");
+    fgets(current->nama, sizeof(current->nama), stdin);
+    current->nama[strcspn(current->nama, "\n")] = 0;
+    printf("Nilai\t: ");
+    scanf("%f", &current->nilai);
     getchar();
     current->next = NULL;
 }
@@ -87,10 +93,14 @@ void tampil()
         printf("Kosong\n");
     else
     {
+        printf("No\tNama\tNilai\n");
         while (baca != NULL)
         {
-            printf("Nilai = %d\n", baca->data);
-            baca = baca->next;
+            printf("%d\t%s\t%.2f\n", baca->no, baca->nama, baca->nilai);
+            if (baca->next == NULL || is_delete_after_end)
+                baca = NULL;
+            else
+                baca = baca->next;
         }
         // printf("\n");
     }

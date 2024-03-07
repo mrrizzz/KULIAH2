@@ -17,6 +17,17 @@ void menu_delete_single()
     case 3:
         delete_single_looping_option(delete_specific, "Menghapus data posisi tertentu...\n");
         break;
+    case 4:
+        printf("Single Linked List - Insert Di Akhir\n");
+        insert_looping_check(insert_akhir);
+        tampil();
+
+        delete_after();
+        if (is_delete_key_found == 1)
+            printf("Menghapus data setelah posisi tertentu..\n");
+        tampil();
+
+        break;
     case 0:
         break;
     default:

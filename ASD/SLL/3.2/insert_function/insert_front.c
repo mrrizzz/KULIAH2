@@ -1,6 +1,6 @@
 #include "../head.h"
 
-void awal()
+void insert_awal()
 {
     alokasi();
     if (head != NULL)

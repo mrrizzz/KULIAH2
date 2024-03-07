@@ -1,25 +1,24 @@
 #include "../head.h"
-// comment out the unused part
-void before()
+void insert_before()
 {
-    Siswa *findKey, *prev;
+    node *findKey, *prev;
 
     prev = NULL;
     findKey = head;
-
     int key;
+
     alokasi();
     printf("Masukkan sebelum nilai ? ");
     scanf("%d", &key);
 
-    while (findKey != NULL && findKey->nomor != key)
+    while (findKey != NULL && findKey->no != key)
     {
         prev = findKey;
         findKey = findKey->next;
     }
     if (findKey == NULL){
         printf("Gagal menemukan key\n");
-        failedInBefore = 1;
+        failed_in_before = 1;
     }
     else
     {

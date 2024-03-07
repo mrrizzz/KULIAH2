@@ -7,7 +7,9 @@
 
 typedef struct simpul
 {
-    int data;
+    int no;
+    char nama[10];
+    float nilai;
     struct simpul *next;
 } node;
 
@@ -18,6 +20,7 @@ extern int failed_in_before;
 extern int failed_in_after;
 
 extern int is_delete_key_found;
+extern int is_delete_after_end;
 
 void clearScreen();
 void alokasi();
@@ -35,6 +38,7 @@ void menu_insert();
 void delete_awal();
 void delete_akhir();
 void delete_specific();
+void delete_after();
 void delete_single_looping_option(void (*delete)(), const char *);
 void menu_delete_single();
 void menu_delete();

@@ -10,7 +10,7 @@ void delete_specific()
 
     find_key = head;
     is_delete_key_found = 1;
-    while (find_key != NULL && find_key->data != key)
+    while (find_key != NULL && find_key->no != key)
     {
         before_key = find_key;
         find_key = find_key->next;

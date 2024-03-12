@@ -3,7 +3,7 @@
 node *head = NULL, *current;
 int failed_in_after;
 int failed_in_before;
-int is_delete_key_found;
+int is_delete_key_found = 1;
 
 void main_menu()
 {
@@ -49,18 +49,16 @@ void insert_looping_check(void (*insert)())
     } while (choice == 'y' || choice == 'Y');
 }
 
-void delete_single_looping_option(void (*delete)(), const char *delete_message)
+void delete_single_option(void (*delete)(), const char *delete_message)
 {
     printf("Single Linked List - Insert Di Akhir\n");
     insert_looping_check(insert_akhir);
     tampil();
-    while (head != NULL)
-    {
-        delete ();
-        if (is_delete_key_found == 1)
-            printf("%s\n", delete_message);
-        tampil();
-    }
+
+    delete ();
+    if (is_delete_key_found == 1)
+        printf("%s\n", delete_message);
+    tampil();
 }
 
 void alokasi()
@@ -97,10 +95,7 @@ void tampil()
         while (baca != NULL)
         {
             printf("%d\t%s\t%.2f\n", baca->no, baca->nama, baca->nilai);
-            if (baca->next == NULL || is_delete_after_end)
-                baca = NULL;
-            else
-                baca = baca->next;
+            baca = baca->next;
         }
         // printf("\n");
     }

@@ -3,6 +3,7 @@
 void delete_akhir()
 {
     node *tail, *before_tail;
+    
     if (head == NULL)
         return;
 

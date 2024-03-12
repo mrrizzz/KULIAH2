@@ -15,22 +15,17 @@ void delete_specific()
         before_key = find_key;
         find_key = find_key->next;
     }
-    if (find_key == NULL){
+    if (find_key == NULL)
+    {
         printf("\nkey tidak ditemukan\n");
         is_delete_key_found = 0;
     }
     else
     {
-        if (head->next == NULL)
-            delete_awal();
+        if (before_key != NULL)
+            before_key->next = find_key->next;
         else
-        {
-            if (before_key == NULL)
-                head = head->next;
-            else
-                before_key->next = find_key->next;
-
-            free_node(find_key);
-        }
+            head = find_key->next;
+        free_node(find_key);
     }
 }

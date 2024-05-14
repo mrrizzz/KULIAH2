@@ -2,7 +2,9 @@
 
 int main(int argc, char const *argv[])
 {
-  insertDeleteMenu("loop");
+  //komen salah satu yang tidak digunakan
+  insertDeleteMenu("loop"); // untuk insert delete
+  // insertOnlyMenu("loop"); // untuk insert saja
   printList();
   return 0;
 }

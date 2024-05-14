@@ -57,7 +57,8 @@ void insert(const char *insertMessage)
   {
     newNode->prev = toFindKey;
     newNode->next = toFindKey->next;
-    toFindKey->next->prev = newNode;
+    if (toFindKey->next != NULL)
+      toFindKey->next->prev = newNode;
     toFindKey->next = newNode;
   }
   else if (strcmp(insertMessage, "before") == 0)

@@ -5,15 +5,6 @@
 #include <stdio.h>
 #include <string.h>
 
-struct Node
-{
-    int nomor;
-    char nama[50];
-    int nilai;
-    struct Node *next;
-};
-typedef struct Node Siswa;
-
 struct simpul
 {
     int data;

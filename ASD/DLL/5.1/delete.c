@@ -1,13 +1,13 @@
 #include "header.h"
 
-void deleteHead()
-{
-  node *temp;
+  void deleteHead()
+  {
+    node *temp;
 
-  temp = head;
-  head = head->next;
-  freeNode(temp);
-}
+    temp = head;
+    head = head->next;
+    freeNode(temp);
+  }
 
 void deleteTail()
 {

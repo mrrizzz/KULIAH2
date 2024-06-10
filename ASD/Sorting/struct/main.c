@@ -8,7 +8,7 @@ int main(int argc, char const *argv[])
   inputData_struct();
   while (1)
   {
-    select_sorting_method();
+    menu_searching();
   }
   
   return 0;

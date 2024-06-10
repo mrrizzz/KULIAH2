@@ -83,7 +83,7 @@ char dequeue(queue *q)
   return value;
 }
 
-void peek(queue q)
+int peek(queue q, int i)
 {
   int pointer;
   int index;
@@ -92,8 +92,10 @@ void peek(queue q)
   pointer = q.head;
   while (index < q.count)
   {
-    printf("%c\n", q.content[pointer]);
+    if (q.content[pointer] == i)
+      return 1;
     pointer = (pointer + 1) % QUEUE_LENGTH;
     index++;
   }
+  return 0;
 }

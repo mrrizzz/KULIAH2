@@ -14,7 +14,6 @@ void inputData_struct()
     printf("Masukkan nilai = ");
     scanf("%d", &data_siswa[i].nilai);
     getchar();
-    pdata[i] = &data_siswa[i].no;
   }
 }
 

@@ -5,7 +5,7 @@
 #define M INT_MAX
 #define N 5
 
-typedef struct queue
+typedef struct 
 {
   int content[N];
   int head;
@@ -29,7 +29,7 @@ int dequeue(queue *q);
 int isEmpty(queue q);
 int check_queue(queue q, int i);
 void print_path(int R[], int node);
-void displayMatrix(const char *name, int matrix[N][N]);
+void display_matrix(const char *name, int matrix[N][N]);
 void djikstra();
 
 int main()
@@ -95,7 +95,7 @@ void print_path(int R[], int node)
   printf("%d ", node);
 }
 
-void displayMatrix(const char *name, int matrix[N][N])
+void display_matrix(const char *name, int matrix[N][N])
 {
   printf("%s:\n", name);
   for (int i = 0; i < N; i++)
@@ -117,7 +117,9 @@ void displayMatrix(const char *name, int matrix[N][N])
 
 void djikstra() {
   int node_asal, node_tujuan;
-  displayMatrix("Matriks Q  ", Q);
+  queue q;
+
+  display_matrix("Matriks Q  ", Q);
   printf("Masukkan node asal (1-5): ");
   scanf("%d", &node_asal);
   printf("Masukkan node tujuan (1-5): ");
@@ -133,7 +135,6 @@ void djikstra() {
   }
   TQ[node_asal] = 0;
 
-  queue q;
   init_queue(&q);
   enqueue(&q, node_asal);
 
@@ -148,7 +149,7 @@ void djikstra() {
         {
           TQ[i] = Q[currentNode][i] + TQ[currentNode];
           R[i] = currentNode;
-          if (!check_queue(q, i))
+          if (!check_queue(q, i) && i != node_asal && i != node_tujuan)
           {
             enqueue(&q, i);
           }
